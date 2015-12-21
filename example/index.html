@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        div#Create {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        span.deleteItem {
+            font-size: 12px;
+            color: #EC6D6D;
+            float: right;
+            cursor: pointer;
+        }
+
+        div#List {
+            width: 200px;
+        }
+    </style>
+
+    <script src="jquery2.min.js"></script>
+    <script src="controller.js"></script>
+    <script src="model_base.js"></script>
+    <script src="view_base.js"></script>
+    <script src="models/simpleModel.js"></script>
+    <script src="views/simpleView.js"></script>
+</head>
+<body>
+    <button id="CreateNewBtn">Create New</button>
+    <div id="List">
+
+    </div>
+    <div id="Create">
+        <div id="CreateForm">
+
+        </div>
+        <button class="saveBtn">Save</button>
+    </div>
+    <div id="Details">
+
+    </div>
+</body>
+</html>
