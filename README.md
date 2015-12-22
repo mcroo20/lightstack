@@ -1,6 +1,8 @@
 # Lightstack
 
-Lightstack is a new MVC frontend architecture. It is designed to be quick to learn and impliment and ultra light weight. Many libraries are restrictive to how they can be used but our objective was to create something simple, powerful and extendable.
+Lightstack is a new MVC frontend architecture. It is designed to be quick to learn and impliment and ultra light weight. Many libraries are restrictive to how they can be used but our objective was to create something simple, powerful and extendable.  
+
+Try it out here: https://jsfiddle.net/rm8e13ae/1/embedded/result/
 
 ### Version 0.1
 
