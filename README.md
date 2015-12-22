@@ -190,7 +190,7 @@ The base model comes with four defined events:
 * ```changed``` - This event fires whenever an item has been updated or changed. The callback will be passed the changed object
 * ```all_changed``` - This even fires whenever the models object list is changed. This will be on add, remove, and initialization
 
-You can bind to a models events anywhere following the models <script> declaration. The below code will run any time a models objects are updated.
+You can bind to a models events anywhere following the models script declaration. The below code will run any time a models objects are updated.
 ```sh
     ls.Models.patterns.on(ModelEvents.all_changed, function(objects){
         // Do something with the objects
