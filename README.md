@@ -61,12 +61,12 @@ The great part about Lightstack is that everything is customizable and you can a
 
 ### View Base Methods
 These are the most common used methods in the view_base.js. You may over ride any method in the class or even simply alter the base class to fit your needs.
-* list_template - Accepts a method to be used as the HTML creator for a list item. This method should return an HTML string.
-* form_template - Accepts a method to be used as the HTML creator for a form row item. This method should return an HTML string.
-* details_template - Accepts a method to be used as the HTML creator for an items detail view. This method should return an HTML string.
-* add_listener - Creates an event for a selector like jQuery. (CSS_Selector, action, callback) 
-* set_contents - Sets the content of a container and binds all handlers automatically. Can be used in place of $.html()
-* base_object - This variable can be used to describe the base object that will be used by the view.
+* ```list_template``` - Accepts a method to be used as the HTML creator for a list item. This method should return an HTML string.
+* ```form_template``` - Accepts a method to be used as the HTML creator for a form row item. This method should return an HTML string.
+* ```details_template``` - Accepts a method to be used as the HTML creator for an items detail view. This method should return an HTML string.
+* ```add_listener``` - Creates an event for a selector like jQuery. (CSS_Selector, action, callback) 
+* ```set_contents``` - Sets the content of a container and binds all handlers automatically. Can be used in place of $.html()
+* ```base_object``` - This variable can be used to describe the base object that will be used by the view.
 
 ### Models
 Models are designed to be the data guardians of an app. Only the model can make changes to the data regardless of storage location. Obstraction is a large part of a models role on an app. They are the gate keepers that keep the data in check and notify views and other models when their data has changed.  
@@ -171,22 +171,22 @@ ls.add_model('pattern', function(){
 
 ### Model Base Methods
 As with the view base class, the model base class exposes various methods that are meant to be used and others that can be overwritten as needed.
-* set_data - This method will set the data for the model. Data should be formated as an object with the id being the key for the item. ```{ id: {id: 'id', name: 'test'}, id2: {id: 'id2', name: 'test'}}```
-* get - Can be used to return a single item from the model using an ID.
-* get_all - Used to return the entire list of objects.
-* add - Adds a new item to the model. The new item must have an "id" property
-* update - Updates an item within a model. The item must have an "id" property
-* delete - Deletes an item from a model using an "id".
-* set_handler - Sets a function to be called for ```get, create, update, delete``` calls. These methods control how data is sent or stored outside of the model.
-* add_event - Creates a custom event that other views and models can bind to. The default events are ```added, removed, changed, all_changed``` 
-* remove_event - Removes an even from the model. Note that if any objects are trying to bind to that event, they will throw an exception.
+* ```set_data``` - This method will set the data for the model. Data should be formated as an object with the id being the key for the item. ```{ id: {id: 'id', name: 'test'}, id2: {id: 'id2', name: 'test'}}```
+* ```get``` - Can be used to return a single item from the model using an ID.
+* ```get_all``` - Used to return the entire list of objects.
+* ```add``` - Adds a new item to the model. The new item must have an "id" property
+* ```update``` - Updates an item within a model. The item must have an "id" property
+* ```delete``` - Deletes an item from a model using an "id".
+* ```set_handler``` - Sets a function to be called for ```get, create, update, delete``` calls. These methods control how data is sent or stored outside of the model.
+* ```add_event``` - Creates a custom event that other views and models can bind to. The default events are ```added, removed, changed, all_changed``` 
+* ```remove_event``` - Removes an even from the model. Note that if any objects are trying to bind to that event, they will throw an exception.
 
 ### Model Events
 The base model comes with four defined events:
-* added - This event fires whenever a new item is added to the model. The callback will be passed the added object
-* removed - This event fires whenever an item is removed from the model. The callback will be passed the removed object
-* changed - This event fires whenever an item has been updated or changed. The callback will be passed the changed object
-* all_changed - This even fires whenever the models object list is changed. This will be on add, remove, and initialization
+* ```added``` - This event fires whenever a new item is added to the model. The callback will be passed the added object
+* ```removed``` - This event fires whenever an item is removed from the model. The callback will be passed the removed object
+* ```changed``` - This event fires whenever an item has been updated or changed. The callback will be passed the changed object
+* ```all_changed``` - This even fires whenever the models object list is changed. This will be on add, remove, and initialization
 
 You can bind to a models events anywhere following the models <script> declaration. The below code will run any time a models objects are updated.
 ```sh
@@ -199,13 +199,13 @@ You can bind to a models events anywhere following the models <script> declarati
 The last piece of the puzzle is the controller. The controllers job is to tie the view and model together. You can place additional logic in the controller as needed but the logic should be thought to be code used by any view or model. Placing a custom alert or confirm box would be a good example of a method that could exist in the controller.
 
 The main methods of a controller are:
-* add_view - Creates a new view in the ls.Views object.
-* init_view - Initializes a view. This must be called on any view wanting to the Lightstack base_view object
-* add_model - Creates a new model in the ls.Models object
-* init_model - Initializes a model. This must be called on any model using the Lightstack base_model object
-* show_view - Show a view by name.
-* show_view_only - Hides all views except for the named view
-* hide_view - Hides the view by name
+* ```add_view``` - Creates a new view in the ls.Views object.
+* ```init_view``` - Initializes a view. This must be called on any view wanting to the Lightstack base_view object
+* ```add_model``` - Creates a new model in the ls.Models object
+* ```init_model``` - Initializes a model. This must be called on any model using the Lightstack base_model object
+* ```show_view``` - Show a view by name.
+* ```show_view_only``` - Hides all views except for the named view
+* ```hide_view``` - Hides the view by name
 
 ### More to Come
 Lightstack is a brand new project and will change over time to become more powerful and useful. Run the example project(s) under the example folder to try out a simple example.
