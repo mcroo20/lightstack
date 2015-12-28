@@ -14,6 +14,7 @@
  * @param name - You must pass back the data retrieved by storage engine as an array.
  */
 ls.add_model('pattern', function(){
+    var _this = this;
     /**
      * Initialize the model.
      *
